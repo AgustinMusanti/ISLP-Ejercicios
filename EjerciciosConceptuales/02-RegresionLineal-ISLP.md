@@ -25,7 +25,7 @@ El modelo busca la recta que **minimiza el error total**. Para cada punto calcul
 
 ### ¿Puedo confiar en los coeficientes?
 
-Como los β se estiman con una muestra, no son exactos. Cuatro números te dicen qué tan firmes son:
+Como los β se estiman con una muestra, no son exactos. Cuatro números nos dicen qué tan firmes son:
 
 - **Std. error (SE)**: la incertidumbre del coeficiente. Más chico = más preciso.
 - **t-statistic** = coeficiente / SE. Mide a cuántos SE de distancia está el coeficiente del cero. Grande = lejos del cero = la variable parece importar.
@@ -45,7 +45,7 @@ Misma idea, pero con varios predictores a la vez:
 
 > Y ≈ β₀ + β₁·X₁ + … + βₚ·Xₚ
 
-Clave en la interpretación: cada coeficiente es el efecto de **esa** variable **manteniendo las demás fijas**. (Ojo: una variable que se veía importante sola puede dejar de serlo al sumar otras correlacionadas).
+Cada coeficiente es el efecto de **esa** variable **manteniendo las demás fijas**. (Ojo: una variable que se veía importante sola puede dejar de serlo al sumar otras correlacionadas).
 
 Al pasar a múltiple, hay **4 preguntas** que resolver:
 
@@ -68,7 +68,7 @@ No conviene quedarse con todas. Estrategias para elegir un subconjunto:
 
 ### c) ¿Qué tan bien ajusta? → RSE y R² (igual que antes)
 
-Advertencia importante: **agregar variables casi siempre sube el R²**, aunque sean inútiles. Por eso se usa el **R² ajustado**, que penaliza meter variables de más. Para comparar modelos con distinta cantidad de variables, mirá el ajustado.
+Advertencia importante: **agregar variables casi siempre sube el R²**, aunque sean inútiles. Por eso se usa el **R² ajustado**, que penaliza meter variables de más. Para comparar modelos con distinta cantidad de variables, se mirá el ajustado.
 
 ### d) Predicciones → dos tipos de intervalo
 
@@ -96,24 +96,24 @@ Si la relación es curva, agregás potencias: `Y ≈ β₀ + β₁·X + β₂·X
 ### 6 problemas a vigilar
 
 1. **No linealidad**: la relación real no es recta. Se detecta con un *gráfico de residuos* (si quedan con forma/patrón, algo falta).
-2. **Errores correlacionados**: típico en datos de tiempo; viola un supuesto y subestima los errores.
+2. **Errores correlacionados**: típico en datos de tiempo ya que viola un supuesto y subestima los errores.
 3. **Varianza no constante (heterocedasticidad)**: el error crece con Y (residuos en forma de embudo). Se suele arreglar transformando Y (ej. log).
 4. **Outliers**: puntos con Y muy lejos de lo predicho. Inflan el RSE.
 5. **High leverage**: puntos con un X extremo/raro que tiran de la recta con fuerza desmedida.
-6. **Colinealidad**: dos predictores muy correlacionados entre sí (ej. límite y saldo de tarjeta). Confunde al modelo y hace inestables los coeficientes. Se mide con el **VIF (Variance Inflation Factor)**: VIF > 5–10 = problema; conviene sacar una de las variables.
+6. **Colinealidad**: dos predictores muy correlacionados entre sí (ej. límite y saldo de tarjeta). Confunde al modelo y hace inestables los coeficientes. Se mide con el **VIF (Variance Inflation Factor)**: VIF > 5–10 = problema, por lo que conviene sacar una de las variables.
 
 ---
 
 ## 4. Regresión lineal vs. KNN (paramétrico vs. no paramétrico)
 
-- **Regresión lineal** (paramétrico): asume forma de recta. Si la relación **es** aprox. lineal, gana: simple, interpretable, necesita pocos datos.
+- **Regresión lineal** (paramétrico): asume forma de recta. Si la relación **es** aprox. lineal, gana al ser simple, interpretable y necesitar pocos datos.
 - **KNN** (no paramétrico): no asume forma, se adapta a cualquier relación. Gana cuando la relación es **muy no lineal**.
 
 Pero KNN sufre la **maldición de la dimensionalidad**: con muchas variables, los "vecinos" dejan de estar cerca y el método empeora. Regla práctica: con muchas dimensiones y/o pocos datos, **la regresión lineal suele rendir mejor** aunque la relación no sea perfectamente lineal.
 
 ---
 
-### Glosario express
+### Glosario
 
 | Sigla | Qué es | Para qué sirve |
 |---|---|---|
