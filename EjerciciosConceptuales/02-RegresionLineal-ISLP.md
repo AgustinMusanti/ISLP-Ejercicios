@@ -15,7 +15,7 @@ Los **β** (coeficientes) son los números que el modelo aprende de los datos.
 - **β₀ (intercept)**: valor de Y cuando X = 0. Es el punto de partida de la recta.
 - **β₁ (pendiente)**: cuánto cambia Y por cada unidad que sube X.
 
-**Ejemplo:** `ventas ≈ 7 + 0.05·TV`. Cada $1 más en publicidad de TV suma 0.05 unidades de venta; sin TV, las ventas base son 7.
+**Ejemplo:** `ventas ≈ 7 + 0.05·TV`. Cada $1 más en publicidad de TV suma 0.05 unidades de venta.
 
 ### ¿Cómo encuentra la recta? → Mínimos cuadrados (RSS)
 
