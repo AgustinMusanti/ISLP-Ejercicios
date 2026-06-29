@@ -1,6 +1,6 @@
-# Capítulo 3 — Regresión Lineal (resumen)
+# Capítulo 3 — Regresión Lineal
 
-La idea de fondo: predecir una variable numérica **Y** (ej. ventas, balance) como una **suma ponderada** de variables explicativas **X**. El modelo es una recta (o un plano, si hay varias X):
+La idea de fondo es predecir una variable numérica **Y** (ej. ventas, balance) como una **suma ponderada** de variables explicativas **X**. El modelo es una recta (o un plano, si hay varias X):
 
 > Y ≈ β₀ + β₁·X₁ + β₂·X₂ + … + βₚ·Xₚ
 
